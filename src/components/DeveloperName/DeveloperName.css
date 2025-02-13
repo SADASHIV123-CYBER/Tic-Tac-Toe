@@ -1,0 +1,29 @@
+.developer-name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff8a00, #da1b60);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  .developer-name span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #fff200, #ff7300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 138, 0, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(218, 27, 96, 0.9);
+    }
+  }
+  
