@@ -1,19 +1,15 @@
-// import Icon from "../Icon/icon";
+import React from 'react';
 import Icon from '../Icon/Icon';
 import './Card.css';
 
-function Card({ gameEnd, player, onPlay, index }) {
-    let icon = <Icon />
-if(player == 'X') {
-        icon =     <Icon name="cross" />
-    } else if(player == 'O') {
-        icon = <Icon name="circle" />
-    }
+const Card = React.memo(({ gameEnd, player, onPlay, index }) => {
+    const icon = player === 'X' ? <Icon name="cross" /> : player === 'O' ? <Icon name="circle" /> : null;
+
     return (
-        <div className="card" onClick={() => !gameEnd  && player=="" && onPlay(index) }>
+        <div className="card" onClick={() => !gameEnd && player === "" && onPlay(index)}>
             {icon}
         </div>
-    )
-}
+    );
+});
 
 export default Card;
